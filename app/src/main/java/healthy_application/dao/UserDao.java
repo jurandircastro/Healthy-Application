@@ -1,4 +1,4 @@
-package com.example.beltrao.healthy.dao;
+package healthy_application.dao;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -6,8 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.example.beltrao.healthy.dao.IDao;
-import com.example.beltrao.healthy.entities.User;
+import healthy_application.models.User;
 
 /**
  * Created by Home on 28/10/2016.

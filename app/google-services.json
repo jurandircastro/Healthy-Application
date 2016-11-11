@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "952399354815",
+    "firebase_url": "https://healthy-application-2161e.firebaseio.com",
+    "project_id": "healthy-application-2161e",
+    "storage_bucket": "healthy-application-2161e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:952399354815:android:990f6dcf265ab6b6",
+        "android_client_info": {
+          "package_name": "com.example.beltrao.healthy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "952399354815-aknj15otloc77dqm42eofjler95okjco.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.beltrao.healthy",
+            "certificate_hash": "430DE63D981B2DA9A10455880410B2E569653547"
+          }
+        },
+        {
+          "client_id": "952399354815-gm3b5kg10tsn5tmuhikvh912mduo1409.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2LLK6MpAJc4HIpn9OkzgVR_gTPkVGOa8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "952399354815-gm3b5kg10tsn5tmuhikvh912mduo1409.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

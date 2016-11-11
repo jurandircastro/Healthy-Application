@@ -1,4 +1,4 @@
-package com.example.beltrao.healthy.dao;
+package healthy_application.dao;
 
 import android.database.Cursor;
 
