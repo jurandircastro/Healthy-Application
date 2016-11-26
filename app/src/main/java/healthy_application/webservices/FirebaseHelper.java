@@ -21,7 +21,7 @@ public class FirebaseHelper {
     private boolean registred;
     private ArrayList<User> users;
 
-    public FirebaseHelper(DatabaseReference db){
+    public FirebaseHelper(DatabaseReference db) {
         this.db = db;
         users = new ArrayList<>();
     }
@@ -32,7 +32,7 @@ public class FirebaseHelper {
         boolean loged = false;
 
 
-        for (User u: users) {
+        for (User u : users) {
             if (u.getLogin() == user.getLogin()) {
                 if (u.getPassword().equals(user.getPassword())) {
                     loged = true;
@@ -43,38 +43,43 @@ public class FirebaseHelper {
         return loged;
     }
 
-    public boolean registerUser(User user){
+    public boolean registerUser(User user) {
 
         users = getUsers();
 
-        if(user==null){
+        if (user == null) {
             registred = false;
-        } else{
-             try{
-                 if (!users.contains(user)) {
-                     db.child("Users").push().setValue(user);
-                     registred = true;
-                 }
-            }catch(DatabaseException e){
+        } else {
+            try {
+                boolean contais = false;
+                for (User u : users) {
+                    if (u.getLogin() == user.getLogin()) {
+                        contais = true;
+                    }
+                }
+                if (contais) {
+                    db.child("Users").push().setValue(user);
+                    registred = true;
+                }
+            } catch (DatabaseException e) {
                 e.printStackTrace();
                 registred = false;
             }
-
         }
         return registred;
     }
 
-    private void updateList(DataSnapshot dataSnapshot){
+    private void updateList(DataSnapshot dataSnapshot) {
 
         users.clear();
 
-        for (DataSnapshot ds: dataSnapshot.getChildren()) {
+        for (DataSnapshot ds : dataSnapshot.getChildren()) {
             User user = ds.getValue(User.class);
             users.add(user);
         }
     }
 
-    private ArrayList<User> getUsers(){
+    private ArrayList<User> getUsers() {
         db.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
@@ -103,8 +108,6 @@ public class FirebaseHelper {
         });
         return users;
     }
-
-
 
 
 }
